@@ -5,20 +5,64 @@
 //
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
-// command palette
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+    "hard_tabs": true,
+    "agent_servers": {
+        "github-copilot-cli": {
+            "type": "registry",
+        },
+        "gemini": {
+            "type": "registry",
+        },
+        "cursor": {
+            "type": "registry",
+        },
+        "claude-acp": {
+            "type": "registry",
+        },
+        "codex-acp": {
+            "type": "registry",
+        },
     },
-    "version": "2"
-  },
-  "ui_font_size": 18,
-  "buffer_font_size": 18,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Github Dark"
-  }
+    "agent": {
+        "dock": "right",
+        "favorite_models": [],
+        "model_parameters": [],
+    },
+    "project_panel": {
+        "dock": "left",
+    },
+    "bottom_dock_layout": "contained",
+    "active_pane_modifiers": {
+        "inactive_opacity": 1.0,
+    },
+    "centered_layout": {
+        "right_padding": null,
+        "left_padding": 0.2,
+    },
+    "terminal": {
+        "font_size": 20.0,
+        "default_height": 640.0,
+        "default_width": 1280.0,
+    },
+    "cli_default_open_behavior": "new_window",
+    "edit_predictions": {
+        "provider": "copilot",
+    },
+    "agent_buffer_font_size": 20.0,
+    "agent_ui_font_size": 20.0,
+    "icon_theme": {
+        "mode": "light",
+        "light": "Zed (Default)",
+        "dark": "Zed (Default)",
+    },
+    "ui_font_size": 24,
+    "buffer_font_size": 20,
+    "theme": {
+        "mode": "dark",
+        "light": "One Light",
+        "dark": "One Black",
+    },
 }
+
