@@ -7,62 +7,564 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "hard_tabs": true,
-    "agent_servers": {
-        "github-copilot-cli": {
-            "type": "registry",
-        },
-        "gemini": {
-            "type": "registry",
-        },
-        "cursor": {
-            "type": "registry",
-        },
-        "claude-acp": {
-            "type": "registry",
-        },
-        "codex-acp": {
-            "type": "registry",
-        },
+  "hard_tabs": true,
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
     },
-    "agent": {
-        "dock": "right",
-        "favorite_models": [],
-        "model_parameters": [],
+    "gemini": {
+      "type": "registry",
     },
-    "project_panel": {
-        "dock": "left",
+    "cursor": {
+      "type": "registry",
     },
-    "bottom_dock_layout": "contained",
-    "active_pane_modifiers": {
-        "inactive_opacity": 1.0,
+    "claude-acp": {
+      "type": "registry",
     },
-    "centered_layout": {
-        "right_padding": null,
-        "left_padding": 0.2,
+    "codex-acp": {
+      "type": "registry",
     },
-    "terminal": {
-        "font_size": 20.0,
-        "default_height": 640.0,
-        "default_width": 1280.0,
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "bottom_dock_layout": "contained",
+  "active_pane_modifiers": {
+    "inactive_opacity": 1.0,
+  },
+  "centered_layout": {
+    "right_padding": null,
+    "left_padding": 0.2,
+  },
+  "terminal": {
+    "font_size": 20.0,
+    "default_height": 640.0,
+    "default_width": 1280.0,
+  },
+  "cli_default_open_behavior": "new_window",
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "agent_buffer_font_size": 20.0,
+  "agent_ui_font_size": 20.0,
+  "icon_theme": {
+    "mode": "light",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "ui_font_size": 24,
+  "buffer_font_size": 20,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Black",
+  },
+  "language_models": {
+    "openai_compatible": {
+      "NCHC": {
+        "api_url": "http://localhost:4000",
+        "available_models": [
+          {
+            "name": "TAIDE-LX-7B-Chat",
+            "display_name": "TAIDE-LX-7B-Chat",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama3-TAIDE-LX-8B-Chat-Alpha1",
+            "display_name": "Llama3-TAIDE-LX-8B-Chat-Alpha1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "TAIDE/b.12.0.0",
+            "display_name": "TAIDE/b.12.0.0",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gpt-oss-20b",
+            "display_name": "gpt-oss-20b",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gpt-oss-120b",
+            "display_name": "gpt-oss-120b",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gpt-oss-safeguard-120b",
+            "display_name": "gpt-oss-safeguard-120b",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gpt-oss-safeguard-20b",
+            "display_name": "gpt-oss-safeguard-20b",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Gemma-3-TAIDE-12b-Chat",
+            "display_name": "Gemma-3-TAIDE-12b-Chat",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Gemma-3-TAIDE-12b-Chat-2602",
+            "display_name": "Gemma-3-TAIDE-12b-Chat-2602",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "taide-gptoss20b-taide-ep5-newdataset",
+            "display_name": "taide-gptoss20b-taide-ep5-newdataset",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "taide-gptoss20b-taide-ep5-newdataset-merged",
+            "display_name": "taide-gptoss20b-taide-ep5-newdataset-merged",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "taide-gptoss20b-qaraft-multi-ep5-lr1e-6-fp16",
+            "display_name": "taide-gptoss20b-qaraft-multi-ep5-lr1e-6-fp16",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "taide-gptoss20b-qaraft-multi-ep5-lr1e-6",
+            "display_name": "taide-gptoss20b-qaraft-multi-ep5-lr1e-6",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "taide-gpt-oss-20b-reasoning",
+            "display_name": "taide-gpt-oss-20b-reasoning",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama_3.1-FoxBrain-70B-V1.2",
+            "display_name": "Llama_3.1-FoxBrain-70B-V1.2",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama3.1-8B-NSTC",
+            "display_name": "Llama3.1-8B-NSTC",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "llama-3.1-8B-m1-raft-v1-ep5",
+            "display_name": "llama-3.1-8B-m1-raft-v1-ep5",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "llama-3.1-8B-m1-raft-v1.1.4-ep5",
+            "display_name": "llama-3.1-8B-m1-raft-v1.1.4-ep5",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gemma-3-12b_raft-v1.2.1",
+            "display_name": "gemma-3-12b_raft-v1.2.1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "llama-3.1-8B-m1-raft-v2-ep5",
+            "display_name": "llama-3.1-8B-m1-raft-v2-ep5",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.1-TAIDE-LX-8B-Chat",
+            "display_name": "Llama-3.1-TAIDE-LX-8B-Chat",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.2-1B-Instruct",
+            "display_name": "Llama-3.2-1B-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Gemma-3-12b-it-TAIDE-distilled-v1",
+            "display_name": "Gemma-3-12b-it-TAIDE-distilled-v1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.1-8B-Instruct",
+            "display_name": "Llama-3.1-8B-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Google-Gemma-3-27B",
+            "display_name": "Google-Gemma-3-27B",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gemma-4-31B-it",
+            "display_name": "gemma-4-31B-it",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gemma-4-26B-A4B-it",
+            "display_name": "gemma-4-26B-A4B-it",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gemma-4-E4B-it",
+            "display_name": "gemma-4-E4B-it",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "medgemma-27b-it",
+            "display_name": "medgemma-27b-it",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "medgemma-27b-text-it",
+            "display_name": "medgemma-27b-text-it",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gemma-3-12b-it",
+            "display_name": "gemma-3-12b-it",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Microsoft-Phi-4",
+            "display_name": "Microsoft-Phi-4",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Phi-4-Reasoning-Plus",
+            "display_name": "Phi-4-Reasoning-Plus",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Microsoft-Phi-4-multimodal-instruct",
+            "display_name": "Microsoft-Phi-4-multimodal-instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Granite-3.1-8B-Instruct",
+            "display_name": "Granite-3.1-8B-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Granite-Guardian-3.1-8B",
+            "display_name": "Granite-Guardian-3.1-8B",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Ministral-8B-Instruct-2410",
+            "display_name": "Ministral-8B-Instruct-2410",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Ministral-3-14B-Instruct-2512",
+            "display_name": "Ministral-3-14B-Instruct-2512",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Ministral-3-8B-Instruct-2512",
+            "display_name": "Ministral-3-8B-Instruct-2512",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "TAIDE-LX-70B-Chat",
+            "display_name": "TAIDE-LX-70B-Chat",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Phi-3.5-TAIDE-Instruct",
+            "display_name": "Phi-3.5-TAIDE-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "phi-3.5-mini-instruct_zhtw_ld1_hq3.1_b8.3-p3_st-task-1-2-3-v3_e4_ORPO_1103-1019_fix3",
+            "display_name": "phi-3.5-mini-instruct_zhtw_ld1_hq3.1_b8.3-p3_st-task-1-2-3-v3_e4_ORPO_1103-1019_fix3",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "phi-3.5-task-123-v3-task4-v4",
+            "display_name": "phi-3.5-task-123-v3-task4-v4",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama3-TAIDE-LX-70B-Chat",
+            "display_name": "Llama3-TAIDE-LX-70B-Chat",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "TAIDE/Llava-Phi-3.5",
+            "display_name": "TAIDE/Llava-Phi-3.5",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "sarc-MT_tw-zh",
+            "display_name": "sarc-MT_tw-zh",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Small-24B-Instruct-2501",
+            "display_name": "Mistral-Small-24B-Instruct-2501",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Small-3.1-24B-Instruct-2503",
+            "display_name": "Mistral-Small-3.1-24B-Instruct-2503",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Small-3.2-24B-Instruct-2506",
+            "display_name": "Mistral-Small-3.2-24B-Instruct-2506",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Devstral-Small-2505",
+            "display_name": "Devstral-Small-2505",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Magistral-Small-2506",
+            "display_name": "Magistral-Small-2506",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Devstral-Small-2507",
+            "display_name": "Devstral-Small-2507",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Magistral-Small-2509",
+            "display_name": "Magistral-Small-2509",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Large-3-675B-Instruct-2512",
+            "display_name": "Mistral-Large-3-675B-Instruct-2512",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Foundation-Sec-8B-Instruct",
+            "display_name": "Foundation-Sec-8B-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.1-70B",
+            "display_name": "Llama-3.1-70B",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.3-Nemotron-Super-49B-v1",
+            "display_name": "Llama-3.3-Nemotron-Super-49B-v1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.1-Nemotron-70B-Instruct",
+            "display_name": "Llama-3.1-Nemotron-70B-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "NVIDIA-Nemotron-3-Nano-30B-A3B",
+            "display_name": "NVIDIA-Nemotron-3-Nano-30B-A3B",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "NVIDIA-Nemotron-3-Super-120B-A12B",
+            "display_name": "NVIDIA-Nemotron-3-Super-120B-A12B",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.1-Nemotron-70B-Instruct-Gaudi3",
+            "display_name": "Llama-3.1-Nemotron-70B-Instruct-Gaudi3",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.2-90B-Vision-Instruct",
+            "display_name": "Llama-3.2-90B-Vision-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.3-70B-Instruct",
+            "display_name": "Llama-3.3-70B-Instruct",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.3-70B-Instruct-Gaudi3",
+            "display_name": "Llama-3.3-70B-Instruct-Gaudi3",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.3-70B-Instruct-MI210",
+            "display_name": "Llama-3.3-70B-Instruct-MI210",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-3.1-405B-Instruct-FP8",
+            "display_name": "Llama-3.1-405B-Instruct-FP8",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-4-Maverick-17B-128E-Instruct-FP8",
+            "display_name": "Llama-4-Maverick-17B-128E-Instruct-FP8",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Llama-4-Scout-17B-16E-Instruct-FP8",
+            "display_name": "Llama-4-Scout-17B-16E-Instruct-FP8",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Voldemort-T1",
+            "display_name": "Voldemort-T1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Thanos3-235B-A22B-Instruct-2507",
+            "display_name": "Thanos3-235B-A22B-Instruct-2507",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Thanos3-235B-A22B",
+            "display_name": "Thanos3-235B-A22B",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Thanos3.5-397B-A17B",
+            "display_name": "Thanos3.5-397B-A17B",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "MiniMax-M2.5",
+            "display_name": "MiniMax-M2.5",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "SEMIKONG-8b-GPTQ",
+            "display_name": "SEMIKONG-8b-GPTQ",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "iLinda-o1",
+            "display_name": "iLinda-o1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "iLinda-Pure-0623",
+            "display_name": "iLinda-Pure-0623",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "iLinda-Mistral32-0623",
+            "display_name": "iLinda-Mistral32-0623",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Small-3.2-24B-Instruct-2506-CS-0625",
+            "display_name": "Mistral-Small-3.2-24B-Instruct-2506-CS-0625",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915",
+            "display_name": "Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-FAPM50-1124",
+            "display_name": "Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-FAPM50-1124",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "gpt-oss-20b-CS-3in1_no_template-1117",
+            "display_name": "gpt-oss-20b-CS-3in1_no_template-1117",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Argus-Coder-V1",
+            "display_name": "Argus-Coder-V1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Argus-Coder-V1-Turbo",
+            "display_name": "Argus-Coder-V1-Turbo",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Argus-Coder-V1-Reasoning",
+            "display_name": "Argus-Coder-V1-Reasoning",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Argus-Coder-V1-Plus",
+            "display_name": "Argus-Coder-V1-Plus",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Argus-Coder-Std",
+            "display_name": "Argus-Coder-Std",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Argus-Coder-Neo",
+            "display_name": "Argus-Coder-Neo",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Argus-Coder-New",
+            "display_name": "Argus-Coder-New",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Rainbell_v2",
+            "display_name": "Rainbell_v2",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "sciexplore-chatbot-v1",
+            "display_name": "sciexplore-chatbot-v1",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "sarc-cosyvoice-taigi-0.5b",
+            "display_name": "sarc-cosyvoice-taigi-0.5b",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "BreezyVoice",
+            "display_name": "BreezyVoice",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "vibevoice-large",
+            "display_name": "vibevoice-large",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "MiniMax-M2.5-tasa",
+            "display_name": "MiniMax-M2.5-tasa",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Mistral-Large-3-675B-Instruct-2512-tasa",
+            "display_name": "Mistral-Large-3-675B-Instruct-2512-tasa",
+            "max_tokens": 131072,
+          },
+          {
+            "name": "Thanos3.5-397B-A17B-tasa",
+            "display_name": "Thanos3.5-397B-A17B-tasa",
+            "max_tokens": 131072,
+          },
+        ],
+      },
     },
-    "cli_default_open_behavior": "new_window",
-    "edit_predictions": {
-        "provider": "copilot",
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o",
     },
-    "agent_buffer_font_size": 20.0,
-    "agent_ui_font_size": 20.0,
-    "icon_theme": {
-        "mode": "light",
-        "light": "Zed (Default)",
-        "dark": "Zed (Default)",
-    },
-    "ui_font_size": 24,
-    "buffer_font_size": 20,
-    "theme": {
-        "mode": "dark",
-        "light": "One Light",
-        "dark": "One Black",
-    },
+    "version": "2",
+  },
+  "ui_font_size": 18,
+  "buffer_font_size": 18,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Github Dark",
+  },
 }
-
